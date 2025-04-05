@@ -3,9 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-todo-list',
   standalone: true,
-  imports: [RouterOutlet, TodoListComponent],
+  imports: [TodoListComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

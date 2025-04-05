@@ -27,6 +27,10 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Hello from the Express API!');
+});
+
 app.use('/api', todoRoutes);
 
 module.exports = app;

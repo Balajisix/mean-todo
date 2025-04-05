@@ -16,14 +16,6 @@ app.use(
     origin: "https://todo-app-mean.vercel.app",
     // origin: "http://localhost:4200",
     methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
-    credentials: true,
   })
 );
 app.use(bodyParser.json());

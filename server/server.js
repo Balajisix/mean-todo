@@ -1,9 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const todoRoutes = require('./routes/todoRoutes');
 const connectDB = require('./config/db');
+const todoRoutes = require('./routes/todoRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 require('dotenv').config();
 connectDB();
@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', todoRoutes);
+app.use('/api', authRoutes);
 
 module.exports = app;
 

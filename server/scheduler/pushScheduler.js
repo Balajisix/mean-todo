@@ -11,7 +11,7 @@ const vapidKeys = {
 
 webpush.setVapidDetails('mailto:balajivs0305@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 
-cron.schedule('*/10 * * * * *', async () => {
+cron.schedule('* * * * *', async () => {
   console.log('Cron job running...');
   const now = new Date();
   const upcomingDeadline = new Date(now.getTime() + 60000);

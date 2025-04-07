@@ -5,8 +5,8 @@ const { getSubcriptions } = require('../controllers/notificationController');
 
 
 const vapidKeys = {
-  publicKey: process.env.PUBLIC_VAPID_KEY,
-  privateKey: process.env.PRIVATE_VAPID_KEY
+  publicKey: process.env.VAPID_PUBLIC_VAPID_KEY,
+  privateKey: process.env.VAPID_PRIVATE_VAPID_KEY
 };
 
 webpush.setVapidDetails('mailto:balajivs0305@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);

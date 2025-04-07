@@ -3,7 +3,6 @@ const webpush = require('web-push');
 const Todo = require('../models/todoModel');
 const { getSubcriptions } = require('../controllers/notificationController');
 
-
 const vapidKeys = {
   publicKey: process.env.VAPID_PUBLIC_VAPID_KEY,
   privateKey: process.env.VAPID_PRIVATE_VAPID_KEY

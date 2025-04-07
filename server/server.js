@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    // origin: "https://todo-app-mean.vercel.app",
-    origin: "http://localhost:4200",
+    origin: "https://todo-app-mean.vercel.app",
+    // origin: "http://localhost:4200",
     methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );

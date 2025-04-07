@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 app.use('/api', todoRoutes);
 app.use('/api', authRoutes);
 app.use('/api/notifications', notificationRoutes);
+// app.use('/test-push', require('./routes/testNotifiction'));
 
 module.exports = app;
 

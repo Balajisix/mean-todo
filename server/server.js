@@ -19,6 +19,7 @@ app.use(
     methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );
+app.use(express.json());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {

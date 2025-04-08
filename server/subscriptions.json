@@ -3,8 +3,8 @@
     "endpoint": "https://fcm.googleapis.com/fcm/send/...",
     "expirationTime": null,
     "keys": {
-      "p256dh": "...",
-      "auth": "..."
+      "p256dh": "your_p256dh_key_here",
+      "auth": "your_auth_key_here"
     }
   }
 ]

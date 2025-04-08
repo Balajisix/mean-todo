@@ -35,7 +35,7 @@ cron.schedule('* * * * *', async () => {
         // Build a payload for this todo
         const payload = JSON.stringify({
           title: 'Todo Deadline Alert',
-          body: `Your task "${todo.title}" is due soon!`
+          body: `Your task is due soon!`
         });
 
         // Retrieve subscriptions for the specific user referenced in the todo

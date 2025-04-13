@@ -33,10 +33,11 @@ cron.schedule('* * * * *', async () => {
     if (todos && todos.length > 0) {
       for (const todo of todos) {
         // Build a payload for this todo
-        const payload = JSON.stringify({
+        const payloadData = {
           title: 'Todo Deadline Alert',
-          body: `Your task "${todo.title}" is due soon!`
-        });
+          body: `Your task is due soon!`
+        };
+        const payload = JSON.stringify(payloadData)
 
         // Retrieve subscriptions for the specific user referenced in the todo
         const userSubscriptions = await Subscription.find({ user: todo.user });

@@ -9,4 +9,7 @@ const TodoSchema = new Schema({
   notified: { type: Boolean, default: false },
 }, { timestamps: true });
 
+TodoSchema.index({ user: 1 });
+TodoSchema.index({ user: 1, completed: 1 });
+
 module.exports = mongoose.model('Todo', TodoSchema);

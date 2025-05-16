@@ -17,12 +17,17 @@ const createTodo = async(req, res) => {
 // Get all todos
 const getTodos = async (req, res) => {
   try {
-    const todos = await Todo.find({ user: req.user.userId });
+    const todos = await Todo.find({ user: req.user.userId })
+      .sort({ createdAt: -1 })
+      .select('title completed deadline createdAt')
+      .lean();
+
     res.status(200).json(todos);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
+
 
 // Update a todo by id
 const updateTodo = async (req, res) => {
